@@ -15,7 +15,7 @@ var tweet = "";
 const request = require('request');
 
 botTweet();
-setInterval(botTweet,1000*60*5); //TWEETS EVERY 5 MIN!!!
+setInterval(botTweet,1000*60*60*2); //TWEETS EVERY 2 HOURS
 
 function botTweet(error,response,body){
 
@@ -31,12 +31,6 @@ function botTweet(error,response,body){
 		console.log(title);
 		shmix(title);
 		// 
-	}
-
-	function tweeted(error,data,response){
-		if(error){
-			console.log(error);
-		}
 	}
 }
 
